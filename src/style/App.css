@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap");
+
+:root {
+  --black-color: #000;
+  --light-color: #e1e1e1;
+  --dark-color: #50504fa8;
+  --silver-color: #c0c0c0;
+  --hover-color: #7d7d7d;
+}
+
+#root {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.275),
+      rgba(255, 255, 255, 0.758)
+    ),
+    url(../assets/images/background.png);
+  background-size: cover;
+  background-color: #00020e;
+  background-attachment: fixed;
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-family: "Merienda", serif;
+  font-weight: 400;
+  font-style: normal;
+  justify-content: center;
+}
+
+.shoe-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shoe-card {
+  width: 250px;
+  min-height: 290px;
+  margin: 10px;
+  border: 2px solid var(--silver-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.701);
+  transition: transform 0.3s;
+  background-color: #000000b6;
+  color: #ffffff;
+}
+
+.shoe-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  min-height: 150px;
+  min-width: 150px;
+  object-fit: contain;
+  background-color: var(--silver-color);
+  display: flex;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoe-card h3 {
+  font-size: 25px;
+  margin: 0;
+  padding: 0 1px;
+  word-wrap: break-word;
+  line-height: 35px;
+}
+
+.shoe-card p {
+  font-size: 20px;
+  margin: 0;
+  padding: 4px 2px;
+  word-wrap: break-word;
+  line-height: 20px;
+}
+
+.shoe-card:hover {
+  transform: scale(1.05);
+  border: 2px solid var(--dark-color);
+  background-color: #000000d0;
+}
+
+.shoe-info {
+  padding: 0;
+  padding-bottom: 3px;
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.logo-container {
+  text-align: center;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo,
+.logo-home {
+  position: relative;
+  width: 130px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 5px #ffffff;
+  transition: transform 0.3s ease, box-shadow 1s ease;
+}
+
+.logo-home {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.logo-home:hover,
+.logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
