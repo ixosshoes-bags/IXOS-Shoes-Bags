@@ -15,6 +15,7 @@ import slipper_women from "./assets/icons/slipper-women.png";
 import highheels from "./assets/icons/high-heels.png";
 import crocs from "./assets/icons/crocs.png";
 import ballerine from "./assets/icons/ballerine.png";
+import handbag from "./assets/icons/handbag.png";
 
 export const categoryImages = {
   Men: [
@@ -31,6 +32,7 @@ export const categoryImages = {
     { category: "Slipper", image: slipper_men },
   ],
   Women: [
+    { category: "Hand Bag", image: handbag },
     { category: "Running", image: running },
     { category: "Sneakers", image: sneakers },
     { category: "High Heels", image: highheels },
@@ -62,13 +64,13 @@ export const categoryImages = {
     { category: "Slipper", image: slipper_women },
   ],
   "Boys & Girls": [
-    { category: "Running"},
-    { category: "Sneakers"},
-    { category: "Boots"},
-    { category: "Sandals"},
-    { category: "Casual"},
-    { category: "Crocs"},
-    { category: "Slipper"},
+    { category: "Running" },
+    { category: "Sneakers" },
+    { category: "Boots" },
+    { category: "Sandals" },
+    { category: "Casual" },
+    { category: "Crocs" },
+    { category: "Slipper" },
   ],
 };
 
