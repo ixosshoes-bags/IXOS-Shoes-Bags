@@ -35,7 +35,7 @@ function HomePage() {
     ) {
       navigate("/admin");
     }
-  };
+  };  
 
   return (
     <div className="home-page">
@@ -90,7 +90,7 @@ function HomePage() {
             <img src={flag} alt="Lebanon Flag" className="waving-flag" />!
             <br></br>You can place your orders through direct messages on our{" "}
             <a
-              href="https://www.instagram.com/darazishoes/"
+              href="https://www.instagram.com/ixos_shoes_and_bags/"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -98,7 +98,7 @@ function HomePage() {
             </a>{" "}
             or{" "}
             <a
-              href="https://wa.me/+96176761318"
+              href="https://wa.me/+96103856611"
               target="_blank"
               rel="noopener noreferrer"
             >

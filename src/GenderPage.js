@@ -4,6 +4,7 @@ import { query, collection, getDocs, orderBy } from "firebase/firestore";
 import { db } from "./firebaseConfig";
 import SearchBar from "./SearchBar";
 import Footer from "./Footer";
+import logo from "./assets/images/logo.png";
 import { categoryImages } from "./CommonComponent";
 import "./style/HomePage.css";
 import "./style/App.css";
@@ -52,7 +53,14 @@ function GenderPage() {
 
   return (
     <div className="gender-page">
-      <SearchBar />
+      <div className="top-page">
+        <div className="logo-container">
+          <a href="/">
+            <img src={logo} alt="Darazi Shoes Logo" className="logo-gender" />
+          </a>
+        </div>
+        <SearchBar />
+      </div>
       <div className="App">
         <h2 className="gender-title">{gender}</h2>
 
@@ -77,6 +85,15 @@ function GenderPage() {
               ? `Showing Shoes for: ${selectedCategory}`
               : "Select a Category to See Shoes"}
           </h3>
+          {!selectedCategory && (
+            <div id="default">
+              <h3>
+                <span>Pick a category</span>
+                <span>from the list above</span>
+                <span>to explore our collection</span>
+              </h3>
+            </div>
+          )}
           {selectedCategory && groupedShoesByCategory[selectedCategory] ? (
             <div className="category-row">
               {groupedShoesByCategory[selectedCategory].map((shoe) => (
