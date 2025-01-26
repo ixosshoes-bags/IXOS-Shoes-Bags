@@ -4,35 +4,6 @@
   flex: 1;
 }
 
-.gender-page {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.gender-title {
-  font-size: 40px;
-  margin: 2px;
-}
-
-.category-title {
-  padding: 10px;
-  font-size: 30px;
-  color: #ffffff;
-  border-top: #ffffff 3px solid;
-  border-bottom: #ffffff 3px double;
-  background-color: #000000d0;
-}
-
-.category-row {
-  display: flex;
-  flex-wrap: wrap;
-  overflow-x: auto;
-  justify-content: space-evenly;
-  gap: 10px;
-  padding: 10px;
-}
-
 button {
   padding: 10px 20px;
   font-size: 16px;
@@ -69,11 +40,11 @@ button:disabled {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
 }
 
 .gender-buttons button {
-  width: 180px;
+  width: 200px;
   font-size: 18px;
   position: relative;
   display: flex;
@@ -84,6 +55,10 @@ button:disabled {
   font-family: "Merienda", serif;
   font-style: normal;
   border: var(--silver-color) 1px outset;
+  border-top-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
   padding: 10px 20px;
   overflow: hidden;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -145,8 +120,18 @@ button:disabled {
   flex-direction: row;
 }
 
+#boy-button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#girl-button {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
 .kids-buttons button {
-  width: 88px;
+  width: 98px;
   margin: 0 2px;
 }
 
@@ -193,16 +178,6 @@ button:disabled {
 .admin-button-container {
   padding: 10px;
   margin-top: -60px;
-}
-
-.admin-button {
-  padding: 0px;
-  font-size: 16px;
-  background-color: #00000000;
-  color: rgba(255, 255, 255, 0);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
 }
 
 .delivery-info {
@@ -277,127 +252,31 @@ button:disabled {
 }
 
 .info-container {
-  width: 305px;
+  width: 200px;
   display: flex;
-  justify-content: end;
-  margin-top: -20px;
+  justify-content: space-around;
+}
+
+.info-container svg {
+  margin: 0;
 }
 
 .info-button {
-  width: 10px !important;
-  aspect-ratio: 1;
-  border-radius: 50% !important;
+  width: 63px !important;
   font-style: italic !important;
-  right: 0;
   text-align: center;
 }
 
-.category-image-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  overflow: scroll;
+.admin-button {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
 }
 
-.category-card {
-  padding: 10px 2px;
+.barcode-button {
+  border-radius: 5px !important;
 }
 
-.category-card p {
-  margin: 5px 0;
-}
-
-.category-card img {
-  width: 100px;
-  padding: 5px;
-  margin: 0 10px;
-  border: #000 solid 1px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  transition: transform 0.3s ease, border 0.3s ease;
-}
-
-.category-card.selected {
-  background-color: var(--silver-color);
-  border: 2px solid #000000;
-  border-bottom: none;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  z-index: 2;
-}
-
-.category-card.selected img {
-  transform: scale(1.1);
-  border: 2px solid #000000;
-}
-
-.category-card:first-child.selected {
-  border-left: none;
-  border-top-left-radius: 0;
-}
-
-.category-card:last-child {
-  border-right: none;
-  border-top-right-radius: 0;
-}
-
-#default {
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#default h3 {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-@keyframes removeCursor {
-  0% {
-    border-right: 2px solid black;
-  }
-  100% {
-    border-right: transparent;
-  }
-}
-
-#default h3 span {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid transparent;
-  width: 0;
-}
-
-#default h3 span:nth-child(1) {
-  animation: typing 2s steps(40, end) forwards, blink 1s step-end infinite, removeCursor 6.8s forwards;
-  animation-delay: 1s;
-}
-
-#default h3 span:nth-child(2) {
-  animation: typing 2s steps(40, end) forwards, blink 1s step-end infinite, removeCursor 6.8s forwards;
-  animation-delay: 3s;
-}
-
-#default h3 span:nth-child(3) {
-  animation: typing 2s steps(40, end) forwards, blink 1s step-end infinite, removeCursor 6.8s forwards;
-  animation-delay: 5s;
+.info-button-style {
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
 }

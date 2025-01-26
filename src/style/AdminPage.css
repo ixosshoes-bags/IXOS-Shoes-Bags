@@ -26,7 +26,6 @@
   );
   color: #ffffff;
   padding: 5px;
-  margin: 0 auto;
 }
 
 .admin-gallery {
@@ -108,7 +107,7 @@
   background-color: var(--dark-color);
 }
 
-.admin-page input {
+.preview input {
   background-color: #ffffff;
   border-radius: 5px;
   border: 2px solid #000000;
@@ -117,7 +116,7 @@
   width: 90%;
 }
 
-.admin-page select {
+.preview select {
   background-color: #ffffff;
   border-radius: 5px;
   border: 2px solid #000000;
@@ -127,7 +126,7 @@
   line-height: 30px;
 }
 
-.admin-page form {
+.preview form {
   padding-bottom: 20px;
   display: flex;
   width: 50%;
@@ -170,6 +169,8 @@
 
 .password-section input {
   width: 200px;
+  padding: 10px;
+  height: 7px;
 }
 
 .password-section button {
@@ -202,7 +203,7 @@
 nav {
   display: flex;
   justify-content: center;
-  padding: 5px;
+  padding: 15px;
 }
 
 .navbar {
@@ -214,7 +215,7 @@ nav {
   transition: background-color 0.3s ease, transform 0.3s ease;
   box-shadow: 0px 2px 6px 3px var(--silver-color);
   padding: 5px 5px;
-  width: 100px;
+  width: 130px;
   height: 30px;
 }
 
@@ -298,6 +299,11 @@ nav {
 .photo_library-icon {
   color: var(--silver-color);
 }
+
+.barcode-icon {
+  color: var(--silver-color);
+}
+
 
 .active {
   color: #000000;

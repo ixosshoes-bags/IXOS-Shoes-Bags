@@ -4,6 +4,9 @@ import {
   faFemale,
   faChild,
   faChildDress,
+  faBarcode,
+  faLock,
+  faInfo,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
@@ -25,6 +28,10 @@ function HomePage() {
     navigate(`/info`);
   };
 
+  const handleBarcode = () => {
+    navigate(`/scan`);
+  };
+
   const handleAdminAccess = () => {
     const password = prompt("Enter admin password:");
     if (
@@ -35,7 +42,7 @@ function HomePage() {
     ) {
       navigate("/admin");
     }
-  };  
+  };
 
   return (
     <div className="home-page">
@@ -63,12 +70,14 @@ function HomePage() {
           </button>
           <div className="kids-buttons">
             <button
+              id="boy-button"
               className="selectgender"
               onClick={() => handleGenderSelect("Boys")}
             >
               <FontAwesomeIcon icon={faChild} /> Boys
             </button>
             <button
+              id="girl-button"
               className="selectgender"
               onClick={() => handleGenderSelect("Girls")}
             >
@@ -76,13 +85,25 @@ function HomePage() {
             </button>
           </div>
           <div className="info-container">
-            <button className="info-button" onClick={() => handleinfoSelect()}>
-              i
+            <button
+              className="info-button admin-button"
+              onClick={handleAdminAccess}
+            >
+              <FontAwesomeIcon icon={faLock} />
+            </button>
+            <button
+              className="info-button barcode-button"
+              onClick={() => handleBarcode()}
+            >
+              <FontAwesomeIcon icon={faBarcode} />
+            </button>
+            <button
+              className="info-button info-button-style"
+              onClick={() => handleinfoSelect()}
+            >
+              <FontAwesomeIcon icon={faInfo} />
             </button>
           </div>
-        </div>
-        <div className="admin-button-container">
-          <button className="admin-button" onClick={handleAdminAccess}></button>
         </div>
         <div className="delivery-info">
           <p>

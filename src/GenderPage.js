@@ -6,7 +6,7 @@ import SearchBar from "./SearchBar";
 import Footer from "./Footer";
 import logo from "./assets/images/logo.png";
 import { categoryImages } from "./CommonComponent";
-import "./style/HomePage.css";
+import "./style/GenderPage.css";
 import "./style/App.css";
 
 function GenderPage() {
