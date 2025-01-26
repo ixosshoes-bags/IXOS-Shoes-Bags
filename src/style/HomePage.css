@@ -120,19 +120,20 @@ button:disabled {
   flex-direction: row;
 }
 
+.kids-buttons button {
+  width: 97px;
+}
+
 #boy-button {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  margin-right: 3px;
 }
 
 #girl-button {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-}
-
-.kids-buttons button {
-  width: 98px;
-  margin: 0 2px;
+  margin-left: 3px;
 }
 
 .gender-buttons svg {
@@ -254,7 +255,7 @@ button:disabled {
 .info-container {
   width: 200px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .info-container svg {
@@ -262,8 +263,7 @@ button:disabled {
 }
 
 .info-button {
-  width: 63px !important;
-  font-style: italic !important;
+  width: 64px !important;
   text-align: center;
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Quagga from "quagga";
 import { collection, getDocs } from "firebase/firestore";
-import { db } from "./firebaseConfig"; // Make sure this imports your Firebase setup
+import { db } from "./firebaseConfig";
 import logo from "./assets/images/logo.png";
 import SearchBar from "./SearchBar";
 import Footer from "./Footer";
@@ -14,7 +14,6 @@ const ScanPage = () => {
   const [database, setDatabase] = useState({});
   const scannerRef = useRef(null);
 
-  // Fetch barcode data from Firestore
   const fetchDatabase = async () => {
     try {
       const barcodeCollection = collection(db, "barcodes");
@@ -22,7 +21,7 @@ const ScanPage = () => {
       const barcodeData = {};
       snapshot.forEach((doc) => {
         const data = doc.data();
-        barcodeData[data.barcode] = `$${data.price.toFixed(2)}`; // Map barcode to price
+        barcodeData[data.barcode] = `$${data.price.toFixed(2)}`;
       });
       setDatabase(barcodeData);
     } catch (err) {
@@ -31,7 +30,7 @@ const ScanPage = () => {
   };
 
   useEffect(() => {
-    fetchDatabase(); // Fetch the database when the component mounts
+    fetchDatabase();
   }, []);
 
   useEffect(() => {
@@ -75,7 +74,7 @@ const ScanPage = () => {
         Quagga.stop();
       };
     }
-  }, [database]); // Reinitialize scanner when the database updates
+  }, [database]);
 
   return (
     <div className="home-page">

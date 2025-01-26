@@ -116,7 +116,7 @@ body {
   align-items: center;
 }
 
-.logo-gender{
+.logo-gender {
   position: relative;
   width: 80px;
   aspect-ratio: 1;
@@ -125,7 +125,8 @@ body {
   margin-left: 10px;
 }
 
-.logo, .logo-home {
+.logo,
+.logo-home {
   position: relative;
   width: 130px;
   aspect-ratio: 1;
@@ -155,22 +156,22 @@ body {
   }
 }
 
-.top-page{
+.top-page {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.top-page .search-bar{
+.top-page .search-bar {
   height: 30px;
   width: 100%;
   margin-bottom: 10px;
 }
 
-.top-page .search-input{
+.top-page .search-input {
   width: calc(40% + 45px);
 }
 
-.top-page .logo-container{
+.top-page .logo-container {
   margin-bottom: 0;
 }
