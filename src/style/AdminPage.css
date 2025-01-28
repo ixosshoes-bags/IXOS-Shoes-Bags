@@ -359,7 +359,7 @@ nav {
 
 .box-admin {
   width: calc(80% + 30px);
-  max-width: 330px;
+  max-width: 400px;
   height: auto;
   color: #000000;
   font-size: 16px;
