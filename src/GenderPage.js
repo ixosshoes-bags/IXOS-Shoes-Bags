@@ -83,7 +83,7 @@ function GenderPage() {
           <h3>
             {selectedCategory
               ? `Showing Shoes for: ${selectedCategory}`
-              : "Select a Category to See Shoes"}
+              : "Choose a Category to Get Started"}
           </h3>
           {!selectedCategory && (
             <div id="default">
